@@ -1,51 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>Kadumane Hills Estate</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+      /*position: relative;*/
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 10px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      /*-webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%;  /*Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: 10px;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 15px !important;
+      letter-spacing: 3px;
+      opacity: 1;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  </style>
 </head>
-<body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<div class="jumbotron text-center">
-  <h1>Kadumane Hills Estate</h1>
-  <!-- <p>Plan less. Unwind</p> -->
-  
-  <p> Thank you for visiting. This site is under construction. </p>
-  <p> For enquiries please mail to info@kadumane.com </p>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+   <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#tariff">Tariff</a></li>
+        <li><a href="#contact">Contact</a></li>
+<!--    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div id="spacer" class="container text-center"><p> </p> </div>
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active"> 
+        <img src="./img/img1.jpg" alt="Kadumane Estate" width="600" height="400">
+        <div class="carousel-caption" align=center>
+          <h2>Take a deep breath...</h2>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./img/img2.jpg" alt="Kadumane Estate"  width="600" height="400">
+        <div class="carousel-caption">
+          <h2>Plan less.</h2>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./img/img3.jpg" alt="Kadumane Estate" width="600" height="400">
+        <div class="carousel-caption">
+          <h2>Chill more.</h2>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="./img/img4.jpg" alt="Kadumane Estate"  width="600" height="400">
+        <div class="carousel-caption">
+          <h2>Unwind.</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
 </div>
 
-  <!--
-<div class="container">
+
+<div id="welcome" class="container text-center">
+  <h3 align=center>Welcome to Kadumane Hills Estate</h3>
+  <p>The perfect destination for family holidays on a budget. Experience the outdoors and appreciate the surrounding natural beauty.
+The Kadumane Hills Estate, surrounded by forests and lush green paddy fields heaven-like and out of the world.  View of ranges of hills and sunrise and sunset set point are a delight to see, relax in the tranquility and give up any thoughts of the outside world. Added to it is the thrill of trekking, mountaineering or off-roading in the estate where you come close to nature.</p>
+  </div>
+
+  <!-- Container (Activities Section) -->
+<div id="activities" class="container text-center">
+  <div id="spacer" class="container text-center"><p> </p> </div>
+   <h3>Activities</h3>
+  <p>At Kadumane Hills Estate we offer a range of recreation activities for you to enjoy during your stay. When you're ready to explore beyond the confines of our estate, our knowledgeable and accommodating team members will help you arrange a memorable experience...</p>
+  <p>Activities available to engage kids to senior people. Various difficulty levels treks can be arranged from our estate.</p>
   <div class="row">
-    <div class="col-sm-6">
-      <h3>Welcome</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div class="col-sm-4" >
+      <p class="text-center"><strong>Activities</strong></p><br>
+       <p>
+           Forest Treks <br>
+           Mud Volleyball <br>
+           Football <br>
+           Shuttle <br>
+           Kite Flying <br>
+           Cricket <br>
+           Camp Fire <br>
+           Visit to nearby water Falls <br>
+        </p>
+      </div>
+    
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Corporate Activities</strong></p><br>
+      <div id="demo2" class="text-center">
+        <p>
+          Team Building <br>
+           Conferences <br>
+           Special Events <br>
+        </p>
+      </div>
     </div>
-    <div class="col-sm-6">
-      <h3>Activities</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-6">
-      <h3>Tariff</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-6">
-      <h3>Contact</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+</div>
+
+<!-- Container (Tariff Section) -->
+<div id="tariff" class="container text-center">
+<div id="spacer" class="container text-center"><p> </p> </div>
+  <!--  <div class="container"> -->
+    <h3> Tariff</h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./img/icon_camp.jpg" alt="Camping" width="400" height="300">
+          <p><strong>Camping Tents</strong></p>
+          <p>Available 2 Person, 4 Person and 10 Person Tents. Our rates are Rs 1000 per person per day.</p>
+          <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Book</button> -->
+        </div>
+      </div>
+      <div class="col-sm-4">
+          <div class="thumbnail"> 
+          <img src="./img/icon_cottage.jpg" alt="Cottage" width="400" height="300">
+          <p><strong>Cottage</strong></p>
+          <p>Ideal for small couples , small groups and families with kids. Each cottage can accommodate 5 persons. Our rates are Rs 2000 per person per day.</p>
+          <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Book</button>-->
+        </div>
+      </div>
+      <div class="col-sm-4">
+         <div class="thumbnail"> 
+          <img src="./img/icon_cottage.jpg" alt="Cottage" width="400" height="300">
+          <p><strong>Dormitory</strong></p>
+          <p>We can accommodate 15 persons in the dormitory. Our rates are Rs 750 per person per day.</p>
+         <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Dormitory</button> -->
+        </div> 
+      </div>  
     </div>
 
+    <button class="btn" data-toggle="modal" data-target="#myModal"> For Enquiries please mail to info@kadumane.com </button> 
+    </div>
+
+  <div id="terms" class="container text-left">
+  <h3>Terms and Conditions</h3>
+    <p>* Package includes Accommodation with food.( lunch, tea with snacks, dinner, breakfast). </p>
+    <p> </p>
+    <p>* Includes usage of swimming pool, volley ball, shuttle, carrom, chess, billiards, children play area, Basket ball, cricket etc. </p>
+    <p>* Children bellow 5 years no charges, 5 to 12 years 60% on adult charges, above 12 years same as adult charge. </p>
+<br>
+
+ <p>NOTE:</p>
+<p> 
+* Out side food and beverages strictly not allowed. <br>
+* Check in 12noon. Check out 11 am. <br>
+* Taxes as applicable.<br>
+* Any extras will charge as per resort rules. <br>
+</p>
+
+ <p>CANCELLATION CHARGES : </p>
+    <p>
+1. 25% - Minimum cancellation charges. <br>
+2. 50% - If Cancelled less than 30 days from date of check in. <br>
+3. NO REFUND in case of cancellations made less than 10 days from date of check in. <br>
+4. NO REFUND applicable on local van bookings.<br>
+    </p>
+<p>RATES SUBJECT TO REVISION WITHOUT NOTICE</p>
+
+<p> </p>
+<p>PAYMENT TERMS : </p>
+
+1.	Due to limited accommodation at our Resorts, a deposit of 50% is required to secure confirmed bookings. <br><br>
+
+2.	All reservations requests will be tentative, unless accompanied by 50% advance. Balance 50% payment should be made 30 days prior to the guests’ arrival at the Resorts. <br><br>
+
+3.	Payments have to be made as per Terms & Conditions applicable; a 18% p.a. interest will be levied on any delays thereof. <br><br>
+
+    <p> REMITTANCES: Cheques / Credit Cards Are Accepted At Our Bangalore Office. Outstation Payments Need To Be Made Via RTGS/ NEFT/ Online Transfer / Pay Order. </p>
+
+    <p>Cheques / Demand Draft should be drawn in favour of " Kadumane Hills Estate ".</p>
+    For Online booking : <br>
+      Account Holder Name: <br>
+      Bank Name : <br>
+      Account Type : Current Account. <br>
+      Account No. : <br>
+      IFSC: <br>
+      Branch Add:  <br>
+      Branch City: <br>
+      E-mail Id: info@kadumane.com <br>
+  </div>  
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <div id="spacer" class="container text-center"><p> </p> </div>
+  <h3 class="text-center">Contact</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <p></p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Saklespura, Hassan</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +91 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: info@kadumane.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- start blog <h3 class="text-center">From The Blog</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Mike</a></li>
+    <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
+    <li><a data-toggle="tab" href="#menu2">Peter</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Mike Ross, Manager</h2>
+      <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Chandler Bing, Guitarist</h2>
+      <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Peter Griffin, Bass player</h2>
+      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+    </div>
+  end blog--> 
   </div>
 </div>
--->
+
+<div id="map"></div>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(12.940960, 75.781728);
+
+function initMap() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+
+marker.setMap(map);
+}
+
+<!--google.maps.event.addDomListener(window, 'load', initialize); --->
+</script>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <!--<p>Bootstrap Theme Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> -->
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
   
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8U_4A6IKk956Lcw_MW5Erw8zvRYWBbBA&callback=initMap">
+    </script>
 </body>
 </html>
 
