@@ -22,10 +22,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script>
   jQuery(document).ready(function($) {
   $.ajax({
-  url : "http://api.wunderground.com/api/f8d47364eb0699e3/geolookup/conditions/q/IA/Cedar_Rapids.json",
+  url : "http://api.wunderground.com/api/f8d47364eb0699e3/conditions/q/Karnataka/bangalore.json", //"http://api.wunderground.com/api/f8d47364eb0699e3/geolookup/conditions/q/IA/Cedar_Rapids.json",
   dataType : "jsonp",
   success : function(parsed_json) {
-  var location = parsed_json['sakleshpura']['saklespura'];
+  var location = parsed_json['location']['city'];
   var temp_f = parsed_json['current_observation']['temp_f'];
   alert("Current temperature in " + location + " is: " + temp_f);
   }
