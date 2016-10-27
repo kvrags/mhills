@@ -19,6 +19,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ga('send', 'pageview');
   ga('set', 'userId', {{132225991}}); // Set the user ID using signed-in user_id.
 </script>
+  <script>
+  jQuery(document).ready(function($) {
+  $.ajax({
+  url : "http://api.wunderground.com/api/f8d47364eb0699e3/geolookup/conditions/q/IA/Cedar_Rapids.json",
+  dataType : "jsonp",
+  success : function(parsed_json) {
+  var location = parsed_json['location']['city'];
+  var temp_f = parsed_json['current_observation']['temp_f'];
+  alert("Current temperature in " + location + " is: " + temp_f);
+  }
+  });
+});
+</script>
+
   
   <title>Kadumane Hills Estate</title>
   <meta charset="utf-8">
@@ -285,20 +299,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div class="powr-weather" id="09a91c4f_1477562499545"></div>
  -->
   
-  <script>
-jQuery(document).ready(function($) {
-  $.ajax({
-  url : "http://api.wunderground.com/api/f8d47364eb0699e3/geolookup/conditions/q/IA/Cedar_Rapids.json",
-  dataType : "jsonp",
-  success : function(parsed_json) {
-  var location = parsed_json['location']['city'];
-  var temp_f = parsed_json['current_observation']['temp_f'];
-  alert("Current temperature in " + location + " is: " + temp_f);
-  }
-  });
-});
-</script>
-  <div id="campfire" class="container text-center">
+    <div id="campfire" class="container text-center">
   <div id="spacer" class="container text-center"><p> </p> </div>
     <h3 align=center>Campfires</h3>
   <p>Here at Kadumane Hills Estate we are all about campfires. We think that camping without a campfire is totally crazy and that is why we encourage a safe fire
