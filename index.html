@@ -284,6 +284,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--weather info  <script src="//www.powr.io/powr.js" external-type="html"></script> 
  <div class="powr-weather" id="09a91c4f_1477562499545"></div>
  -->
+  
+  <script>
+jQuery(document).ready(function($) {
+  $.ajax({
+  url : "http://api.wunderground.com/api/f8d47364eb0699e3/geolookup/conditions/q/IA/Cedar_Rapids.json",
+  dataType : "jsonp",
+  success : function(parsed_json) {
+  var location = parsed_json['location']['city'];
+  var temp_f = parsed_json['current_observation']['temp_f'];
+  alert("Current temperature in " + location + " is: " + temp_f);
+  }
+  });
+});
+</script>
   <div id="campfire" class="container text-center">
   <div id="spacer" class="container text-center"><p> </p> </div>
     <h3 align=center>Campfires</h3>
