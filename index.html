@@ -493,7 +493,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-md-8">
       <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+       <!--   <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
@@ -503,7 +513,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <br>
       <div class="row">
         <div class="col-md-12 form-group">
-          <button class="btn pull-right" disabled type="submit">Send</button>
+          <button class="btn pull-right" disabled type="submit">Send</button>-->
         </div>
       </div>
     </div>
