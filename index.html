@@ -41,15 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ga('send', 'pageview');
   ga('set', 'userId', {{132225991}}); // Set the user ID using signed-in user_id.
   
-  function submitContactForm() {
-   // Get the first form with the name
-   // Hopefully there is only one, but there are more, select the correct index
-   var frm = document.getElementsByName('form_enquiry')[0];
-  alert ("in submitContactForm()");
-    frm.submit(); // Submit
-   frm.reset();  // Reset
-   return false; // Prevent page refresh
-}
+  }
 
 </script>
   <!--<script> // Weather
@@ -507,7 +499,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- <p> <a href="https://www.facebook.com/kadumane" target="_blank" title="Facebook"><img src="./img/facebook.png" alt="Facebook"/></a></p> -->
     </div>
-    <form id="form_enquiry" action="mailto:info@kadumane.com?subject=Enquiry " &name method="post" enctype="text/plain" onSubmit="submitContactForm();"> 
+    <form id="form_enquiry" action="mailto:info@kadumane.com?subject=Enquiry " &name method="post" enctype="text/plain"> 
     <div class="col-md-8">
       <div class="row">
         <div class="col-sm-6 form-group">
@@ -520,7 +512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <!--<input type="email" class="form-control" id="inputEmail" placeholder="Enter your e-mail" required> -->
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="My enquiry " placeholder="Your Message1" rows="5"></textarea>
+      <textarea class="form-control" id="comments" name="My enquiry " placeholder="Your Message" rows="5"></textarea>
       <br>
       <div class="row">
         <div class="col-md-12 form-group">
