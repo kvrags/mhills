@@ -482,7 +482,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>  
 
 <script> 
-  function submitForm() {
+  function submitContactForm() {
    // Get the first form with the name
    // Hopefully there is only one, but there are more, select the correct index
    var frm = document.getElementsByName('form_enquiry')[0];
@@ -524,8 +524,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <br>
       <div class="row">
         <div class="col-md-12 form-group">
-          <textarea class="form-control" id="onSubmit" name="onSubmit" placeholder="Your enquiry has been submitted." rows="1" hidden=true></textarea>
-          <button class="btn pull-right"  type="submit">Send</button>
+          <input type="text" id="onSubmit" name="message" value="Your enquiry has been submitted">
+          <button class="btn pull-right"  type="submit" onclick="submitContactForm();">Send</button>
         </div>
       </div>
     </div>
