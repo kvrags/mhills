@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Directions service</title>
+    <title>Kadumane Hills Estate Directions service</title>
     <style>
       html, body {
         height: 100%;
@@ -30,13 +30,13 @@
   </head>
   <body>
     <div id="floating-panel">
-    <b>Find route to Kadumane Hills Estate</b> <br>
-    <b>Starting from: </b> <br>
+    <b>Kadumane Hills Estate route</b> <br>
+    <b>Start from: </b> 
     <select id="start">
       <option value="Bangalore,Karnata">Bangalore</option>
       <option value="Mysore, Karnatamo">Mysore</option>
       <option value="Hassan, Karnataka">Hassan</option>
-      <option value="12.940960, 75.781728">Sakleshpura</option> //  Sakleshpura, Karnataka
+      <option value="12.940960, 75.781728">Sakleshpura</option> //   Bus Stand in Sakleshpura, Karnataka
 
       </select>
   <!--<b>Waypoints:</b> 
@@ -99,7 +99,7 @@
         directionsService.route({
           origin: document.getElementById('start').value,
           //destination: document.getElementById('end').value,
-          destination:'12.920296, 75.690737', //Taana Estate
+          destination:'12.920296, 75.690737', // Kadumane Hills Estate
           //waypoints: document.getElementById('waypoint').value,
           //waypoints:  window.pos ,
           //optimizeWaypoints: true,
