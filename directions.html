@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Directions service</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: left;
+        font-family: 'Roboto','sans-serif';
+        line-height: 20px;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+    <b>Find route to Kadumane Hills Estate</b> <br>
+    <b>Starting from: </b> <br>
+    <select id="start">
+      <option value="Bangalore,Karnata">Bangalore</option>
+      <option value="Mysore, Karnatamo">Mysore</option>
+      <option value="Hassan, Karnataka">Hassan</option>
+      <option value="12.940960, 75.781728">Sakleshpura</option> //  Sakleshpura, Karnataka
+
+      </select>
+  <!--<b>Waypoints:</b> 
+    <select id="waypoint">
+      <option value="Hanbal, Karnataka">Hanbal</option> ////via  12.926480, 75.694032
+    </select>
+  -->
+  <!--  <br><b>End: </b>
+    <select id="end">
+      //Estate Entrance at Concrete road 12.920296, 75.690737
+      //Estate Entrance Inside 12.9103679,75.6937259
+      <option value="12.920296, 75.690737">Taana Estate</option> //  Sakleshpura, Karnataka
+    </select>
+    <br><b>I am Driving: </b>
+    <select id="drive">
+      <option value="Bangalore,Karnata">Drive</option>
+    </select>
+  -->
+    </div>
+    <div id="map"></div>
+    <script>
+     var pos;
+      function initMap() {
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document. getElementById('map'), {
+          zoom: 14,
+          center: {lat: 12.940959, lng: 75.781714}    //saklespura Bus stand
+        });
+        
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          //navigator.geolocation.getCurrentPosition(function(position) { //this is static location
+          navigator.geolocation.watchPosition(function(position) {
+              pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+              };
+          //map.setCenter(pos);
+             }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+                                              
+        directionsDisplay.setMap(map);
+
+        var onChangeHandler = function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+        document.getElementById('start').addEventListener('change', onChangeHandler);
+       // document.getElementById('end').addEventListener('change', onChangeHandler);
+        //document.getElementById('drive').addEventListener('change', onChangeHandler);
+
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: document.getElementById('start').value,
+          //destination: document.getElementById('end').value,
+          destination:'12.920296, 75.690737', //Taana Estate
+          //waypoints: document.getElementById('waypoint').value,
+          //waypoints:  window.pos ,
+          //optimizeWaypoints: true,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8U_4A6IKk956Lcw_MW5Erw8zvRYWBbBA&callback=initMap">
+    </script>
+  </body>
+</html>
