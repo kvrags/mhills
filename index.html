@@ -45,7 +45,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    // Get the first form with the name
    // Hopefully there is only one, but there are more, select the correct index
    var frm = document.getElementsByName('form_enquiry')[0];
-   frm.submit(); // Submit
+  alert ("in submitContactForm()");
+    frm.submit(); // Submit
    frm.reset();  // Reset
    return false; // Prevent page refresh
 }
