@@ -1,0 +1,633 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @kvrags
+ Watch 0
+  Star 0
+  Fork 0 kvrags/hills
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
+Branch: master Find file Copy pathhills/index.html
+b2801ab  a day ago
+@kvrags kvrags Update index.html
+1 contributor
+RawBlameHistory     
+631 lines (568 sloc)  24.3 KB
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="description" content="Kadumane Hills Estate is a resort located in midst of kadumane forests in Sakleshpur providing camping, cottages and a dormitory"/>
+  <meta name="keywords" content="kadumane, kadumane resorts, resorts in kadumane, holidays in kadumane, resorts at kadumane, kadumane karnataka, kadumane homestay,bangalore resorts, bangalore homestays, jungle resorts kadumane, karnataka tourism, western ghats, forest,mountain, camping, tents, nature, wilderness, trekking, jungle, treks, cottages ,kodagu, kodagu resorts, resorts in kodagu, holidays in kodagu, holidays, resorts at kodagu, kodagu karnataka, kodagu homestay,bangalore resorts, bangalore homestays, jungle resorts kadumane, karnataka tourism, western ghats, western forest, forest,mountain, camping, tents, nature, wilderness, trekking, jungle, treks, cottages"/>
+  <meta name="subject" content="kadumane hills estate and resorts saklespura"/>
+  <meta name="language" content="english"/>
+  <meta name="distribution" content="global"/>
+  <meta name="author" content="kadumane hills estate and resorts sakleshpura"/> 
+  <meta name="robots" content="index, follow"/>
+  <meta name="robots" content="index, all"/>
+  <meta name="yahoo-seeker" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="msnbot" content="index, follow" />
+  <meta name="classification" content="resorts in , karnataka" />
+  <meta name="revisit-after" content="daily"/>
+  <meta name="rating" content="general"/>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MGJQGX');</script>
+<!-- End Google Tag Manager -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-86277161-1', 'auto');
+    ga('send', 'pageview');
+    ga('set', 'userId', {{132225991}}); // Set the user ID using signed-in user_id.
+  }
+</script>
+  <!--<script> // Weather
+  jQuery(document).ready(function($) {
+  $.ajax({
+  url : "http://api.wunderground.com/api/f8d47364eb0699e3/conditions/q/Karnataka/bangalore.json", //"http://api.wunderground.com/api/f8d47364eb0699e3/geolookup/conditions/q/IA/Cedar_Rapids.json",
+  dataType : "jsonp",
+  success : function(parsed_json) {
+  var location = parsed_json['location']['city'];
+  var temp_f = parsed_json['current_observation']['temp_f'];
+  alert("Current temperature in " + location + " is: " + temp_f);
+    document.getElementById("weather").innerHTML = "Current temperature in " + location + " is: " + temp_f;
+  }
+  });
+});
+</script> -->
+  <title>Kadumane Hills Estate</title>
+  <style>
+ /* body {
+      font: 400 15px/1.8 Lato, sans-serif; 
+      /*font-size: 16px;  */
+    color: #777;
+      /*position: relative;*/
+  } */
+    body {
+      font-size: 16px;
+    }
+    .small {
+      font-size: 12px; /* 75% of the baseline */
+    }
+    .large {
+      font-size: 20px; /* 125% of the baseline */
+    }
+    
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 10px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      /*-webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%;  /*Set width to 100% */
+      margin: auto;
+      max-height: 500px !important;
+  }
+   
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      width: 100%
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: 10px;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }f
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 15px !important;
+      letter-spacing: 3px;
+      opacity: 1;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  </style>
+</head>
+  
+<body oncontextmenu="return false" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50"> 
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGJQGX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+   <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#campfire">CampFire</a></li>
+        <li><a href="#tariff">Tariff</a></li>
+        <li><a href="#contact">Contact</a></li>
+<!--    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div id="spacer" class="container text-center"><p> </p> </div>
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active"> 
+        <img src="./img/img1.jpg" alt="Kadumane Estate" width="600" height="400">
+        <div class="carousel-caption" align=center>
+          <h2>Take a deep breath...</h2>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./img/img2.jpg" alt="Kadumane Estate"  width="600" height="400">
+        <div class="carousel-caption">
+          <h2>Plan less.</h2>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./img/img3.jpg" alt="Kadumane Estate" width="600" height="400">
+        <div class="carousel-caption">
+          <h2>Chill more.</h2>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="./img/img4.jpg" alt="Kadumane Estate"  width="600" height="400">
+        <div class="carousel-caption">
+          <h2>Unwind.</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<div id="welcome" class="container">
+  <h3 align=center>Welcome to Kadumane Hills Estate</h3>
+  <p>The perfect destination for nature lovers. <br>Experience the outdoors and appreciate the surrounding natural beauty. <br>
+    The Kadumane Hills Estate is surrounded by decidious forests with renowned wildlife habitat where rare animals and birds roam
+    in deep valleys and hilly terrain.  View of lush paddy fields,  ranges of hills with sunrise & sunset set point are a delight to see. Relax in the serene surroundings of flora and fauna which will help you to give up any thoughts of the outside world. 
+    <br>Added to it is the thrill of trekking, mountaineering or off-roading in the estate where you come close to nature.</p>
+                                   
+   <p> <strong>For Enquiries call <a href="tel:+919731616130">+91 9731616130</a> or e-mail to <a href="mailto:info@kadumane.com?subject=Enquiry">info@kadumane.com</a></strong> </p>
+<!--       <p> <strong>For enquiries please e-mail to <a href="mailto:info@kadumane.com">info@kadumane.com</a></strong> </p> -->
+  </div>
+ <div id="weather" class="container text-center">
+  </div>
+<!--weather info  <script src="//www.powr.io/powr.js" external-type="html"></script> 
+ <div class="powr-weather" id="09a91c4f_1477562499545"></div>
+ -->
+      
+  <!-- Container (Activities Section) -->
+
+  <div id="activities" class="container">
+  <div id="spacer" class="container"><p> </p> </div>
+   <h3 align=center>Activities</h3>
+  <p>At Kadumane Hills Estate we offer a range of recreation activities for you to enjoy during your stay. When you're ready to explore beyond the confines of our estate, our knowledgeable and accommodating team members will help you arrange a memorable experience...</p>
+  <p>Activities available to engage kids to senior people. Various difficulty levels treks can be arranged from our estate.</p>
+  <div class="row">
+    <div class="col-sm-4"  text-center>
+       <p class="text-left">
+         <strong> Activities </strong> <br>
+           Forest Treks <br> <!--(a)Kadumane Forest, b)Huli Goodu Trek - 16km drive then 4 km forest trek) -->
+           Mud Volleyball <br>
+           Football <br>
+           Shuttle <br>
+         <!--  Kite Flying <br> -->
+         <!--  Cricket <br> -->
+           Camp Fire <br>
+           Visit to nearby water falls <br>
+        </p>
+      </div>
+    
+    <div class="col-sm-4"  text-center>
+      <strong>Corporate Activities </strong> <br>
+        <p class="text-left">
+          Team Building <br>
+           Conferences <br>
+           Special Events <br>
+        </p>
+      </div>
+    <div class="col-sm-4"  text-center>
+      <strong>Tourism </strong> <br>
+        <p class="text-left">
+           Manjarabad Fort - 20km<br>
+           Mookana Mane Abhi Falls - 48km<br>
+           Kukke Subramany Temple - 56km<br>
+         </p>
+      </div>
+
+    </div>
+   <p> <strong>For Enquiries call <a href="tel:+919731616130">+91 9731616130</a> or e-mail to <a href="mailto:info@kadumane.com?subject=Enquiry">info@kadumane.com</a></strong> </p>
+  <!-- <p> <strong>For enquiries please e-mail to <a href="mailto:info@kadumane.com">info@kadumane.com</a></strong> </p> -->
+
+     <div id="campfire" class="container">
+  <div id="spacer" class="container text-center"><p> </p> </div>
+    <h3 align=center>Campfires</h3>
+  <p>Here at Kadumane Hills Estate we are all about campfires. We think that camping without a campfire is totally crazy and that is why we encourage a safe fire
+    in the evenings.  Not only do campfires provide warmth and a focal point for any group or family, but loads of fun too!</p>
+
+    <div class="row" text-center>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./img/campfire1.jpg" alt="CamppFire" width="400" height="300">
+       </div>
+     </div>
+      
+      <div class="col-sm-4">
+          <div class="thumbnail"> 
+          <img src="./img/campfire2.jpg" alt="CampFire" width="400" height="300">
+        </div>
+      </div>
+     </div>
+  <p>We provide a fire pit to every group.  We also provide benches and wooden logs around the fire pit so in the evenings you can sit comfortably and enjoy the warmth. 
+    At the same time respect the dangers associated with having campfires.</p>
+     <p> Here is a quick guide: <br>
+      1. Only use the fire pits provided.<br>
+      2. Fire pits should be at least 10 meters away from any tent.<br>
+      3. Do not collect any wood yourselves!<br>
+      4. Ashes and embers might still be hot in the morning.<br>
+      5. Please do not burn anyother materials like paper and plastics in the fire pits.
+    </p>
+    <p><strong> Please note that the estate management cannot accept  responsibility for your possessions or any personal injuries sustained while camping or using fires.</strong></p>
+    
+   <p> <strong>For Enquiries call <a href="tel:+919731616130">+91 9731616130</a> or e-mail to <a href="mailto:info@kadumane.com?subject=Enquiry">info@kadumane.com</a></strong> </p>
+ <!--  <p> <strong>For enquiries please e-mail to <a href="mailto:info@kadumane.com">info@kadumane.com</a></strong> </p> -->
+
+    </div>
+
+
+    
+<!-- Container (Tariff Section) -->
+<div id="tariff" class="container">
+<div id="spacer" class="container"><p> </p> </div>
+  <!--  <div class="container"> -->
+    <h3 align=center>Tariff</h3>
+    <div class="row" class="container">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./img/icon_camp.jpg" alt="Camping" width="400" height="300">
+          <p><strong>Camping Tents</strong></p>
+          <p>Available 2 Person, 4 Person and 10 Person Tents. Our rates are Rs 1200 per person per night.</p>
+       </div>
+        <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Book</button> -->
+        </div>
+      
+      <div class="col-sm-4">
+          <div class="thumbnail"> 
+          <img src="./img/icon_cottage.jpg" alt="Cottage" width="400" height="300">
+          <p><strong>Cottage</strong></p>
+          <p>Ideal for couples and small families with kids (2 Adults and 2 kids basis). Each cottage costs Rs 4000 per night.
+            Extra beds cost Rs 750 per night.</p>
+          <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Book</button>-->
+        </div>
+      </div>
+     </div>
+  <div class="row">
+        <div class="col-sm-4">
+          <div class="thumbnail"> 
+          <img src="./img/icon_cottage.jpg" alt="Cottage" width="400" height="300">
+          <p><strong>Group Cottage</strong></p>
+          <p>Suited for small groups. Each cottage can accommodate 5 persons. Our rates are Rs 2000 per person per night.</p>
+          <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Book</button>-->
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+         <div class="thumbnail"> 
+          <img src="./img/icon_dormitory.jpg" alt="Cottage" width="400" height="300">
+          <p><strong>Dormitory</strong></p>
+          <p>We can accommodate 15 persons in the dormitory. Our rates are Rs 1300 per person per night.</p>
+         <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Dormitory</button> -->
+        </div> 
+      </div>  
+    </div>
+
+    <!--<button class="btn" data-toggle="modal" data-target="#myModal"> For Enquiries please mail to info@kadumane.com </button> -->
+    <p> <strong>For Enquiries call <a href="tel:+919731616130">+91 9731616130</a> or e-mail to <a href="mailto:info@kadumane.com?subject=Enquiry">info@kadumane.com</a></strong> </p> 
+    <!--  <p> <strong>For enquiries please e-mail to <a href="mailto:info@kadumane.com">info@kadumane.com</a></strong> </p> -->
+    </div>
+
+  <div id="terms" class="container text-left">
+  <h3>Terms and Conditions</h3>
+    <p>* Package includes Accommodation with food.( lunch, tea with snacks, dinner, breakfast). </p>
+    <p>* Transfers to & from our resorts are not included in the tariff. </p>
+    <p> </p>
+    <p>* Includes usage of swimming pool, volley ball, shuttle, carrom, chess, billiards, children play area, Basket ball, cricket etc. </p>
+    <p>* Children bellow 5 years no charges, 5 to 12 years 50% on adult charges, above 12 years same as adult charge. </p>
+<br>
+
+ <p>NOTE:</p>
+<p> 
+* Out side food and beverages strictly not allowed. <br>
+* Check in 12noon. Check out 11 am. <br>
+* Taxes as applicable.<br>
+* Any extras will charge as per resort rules. <br>
+</p>
+
+ <p>CANCELLATION CHARGES : </p>
+    <p>
+1. 25% - Minimum cancellation charges. <br>
+2. 50% - If Cancelled less than 30 days from date of check in. <br>
+3. NO REFUND in case of cancellations made less than 10 days from date of check in. <br>
+4. NO REFUND applicable on local van bookings.<br>
+    </p>
+<p>RATES SUBJECT TO REVISION WITHOUT NOTICE</p>
+
+<p> </p>
+<p>PAYMENT TERMS : </p>
+
+1.	Due to limited accommodation at our Resorts, a deposit of 50% is required to secure confirmed bookings. <br><br>
+
+2.	All reservations requests will be tentative, unless accompanied by 50% advance. Balance 50% payment should be made 30 days prior to the guests’ arrival at the Resorts. <br><br>
+
+3.	Payments have to be made as per Terms & Conditions applicable; a 18% p.a. interest will be levied on any delays thereof. <br><br>
+
+    <p> REMITTANCES: Cheques / Credit Cards Are Accepted At Our Bangalore Office. Outstation Payments Need To Be Made Via RTGS/ NEFT/ Online Transfer / Pay Order. </p>
+
+ <!--   <p>Cheques / Demand Draft should be drawn in favour of " Kadumane Hills Estate ".</p>
+    For Online booking : <br>
+      Account Holder Name: <br>
+      Bank Name : <br>
+      Account Type : Current Account. <br>
+      Account No. : <br>
+      IFSC: <br>
+      Branch Add:  <br>
+      Branch City: <br>
+      e-Mail Id: info@kadumane.com <br>-->
+  </div>  
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <div id="spacer" class="container text-center"><p> </p> </div>
+  <h3 class="text-center">Contact</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <p></p>
+        <p> </p>
+
+      <p><span class="glyphicon glyphicon-phone"></span> <strong>For Enquiries call: <a href="tel:+919731616130">+91 9731616130</a></strong></p> 
+      <p><span class="glyphicon glyphicon-envelope"></span> <strong> e-Mail: <a href="mailto:info@kadumane.com?subject=Enquiry">info@kadumane.com</a></strong></p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>  <strong> Driving route to our estate : </strong> <a href="directions.html"> Google Map </a> </p>
+
+      <!-- <p> <a href="https://www.facebook.com/kadumane" target="_blank" title="Facebook"><img src="./img/facebook.png" alt="Facebook"/></a></p> -->
+    </div>
+    <form id="form_enquiry" action="mailto:info@kadumane.com?subject=Enquiry " &name method="post" enctype="text/plain"> 
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="My name " placeholder="Name" type="text" required>
+            <!-- <input class="form-control" id="subject" name="subject" value="Enquiry" placeholder="Enquiry" type=hidden> -->
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="inputPhone" min="10" name="My phone " required type="number"
+            placeholder="Mobile Number">
+          <!--<input type="email" class="form-control" id="inputEmail" placeholder="Enter your e-mail" required> -->
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="My enquiry " placeholder="Your Message" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right"  type="submit );">Send</button>
+        </div>
+      </div>
+    </div>
+    </form> 
+  <br>
+  <!-- start blog <h3 class="text-center">From The Blog</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Mike</a></li>
+    <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
+    <li><a data-toggle="tab" href="#menu2">Peter</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Mike Ross, Manager</h2>
+      <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Chandler Bing, Guitarist</h2>
+      <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Peter Griffin, Bass player</h2>
+      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+    </div>
+  end blog--> 
+  </div>
+</div>
+
+<div id="map"></div>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(12.940960, 75.781728);
+function initMap() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+marker.setMap(map);
+}
+<!--google.maps.event.addDomListener(window, 'load', initialize); --->
+</script>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <!--<p>Bootstrap Theme Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> -->
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8U_4A6IKk956Lcw_MW5Erw8zvRYWBbBA&callback=initMap">
+    </script>
+</body>
+</html>
