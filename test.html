@@ -1,39 +1,8 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @kvrags
- Watch 0
-  Star 0
-  Fork 0 kvrags/hills
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
-Branch: master Find file Copy pathhills/index.html
-b2801ab  a day ago
-@kvrags kvrags Update index.html
-1 contributor
-RawBlameHistory     
-631 lines (568 sloc)  24.3 KB
 <!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <meta name="description" content="Kadumane Hills Estate is a resort located in midst of kadumane forests in Sakleshpur providing camping, cottages and a dormitory"/>
-  <meta name="keywords" content="kadumane, kadumane resorts, resorts in kadumane, holidays in kadumane, resorts at kadumane, kadumane karnataka, kadumane homestay,bangalore resorts, bangalore homestays, jungle resorts kadumane, karnataka tourism, western ghats, forest,mountain, camping, tents, nature, wilderness, trekking, jungle, treks, cottages ,kodagu, kodagu resorts, resorts in kodagu, holidays in kodagu, holidays, resorts at kodagu, kodagu karnataka, kodagu homestay,bangalore resorts, bangalore homestays, jungle resorts kadumane, karnataka tourism, western ghats, western forest, forest,mountain, camping, tents, nature, wilderness, trekking, jungle, treks, cottages"/>
-  <meta name="subject" content="kadumane hills estate and resorts saklespura"/>
-  <meta name="language" content="english"/>
-  <meta name="distribution" content="global"/>
-  <meta name="author" content="kadumane hills estate and resorts sakleshpura"/> 
-  <meta name="robots" content="index, follow"/>
-  <meta name="robots" content="index, all"/>
-  <meta name="yahoo-seeker" content="index, follow" />
-  <meta name="googlebot" content="index, follow" />
-  <meta name="msnbot" content="index, follow" />
-  <meta name="classification" content="resorts in , karnataka" />
-  <meta name="revisit-after" content="daily"/>
-  <meta name="rating" content="general"/>
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -41,203 +10,11 @@ RawBlameHistory
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MGJQGX');</script>
-<!-- End Google Tag Manager -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-86277161-1', 'auto');
-    ga('send', 'pageview');
-    ga('set', 'userId', {{132225991}}); // Set the user ID using signed-in user_id.
-  }
-</script>
-  <!--<script> // Weather
-  jQuery(document).ready(function($) {
-  $.ajax({
-  url : "http://api.wunderground.com/api/f8d47364eb0699e3/conditions/q/Karnataka/bangalore.json", //"http://api.wunderground.com/api/f8d47364eb0699e3/geolookup/conditions/q/IA/Cedar_Rapids.json",
-  dataType : "jsonp",
-  success : function(parsed_json) {
-  var location = parsed_json['location']['city'];
-  var temp_f = parsed_json['current_observation']['temp_f'];
-  alert("Current temperature in " + location + " is: " + temp_f);
-    document.getElementById("weather").innerHTML = "Current temperature in " + location + " is: " + temp_f;
-  }
-  });
-});
-</script> -->
-  <title>Kadumane Hills Estate</title>
-  <style>
- /* body {
-      font: 400 15px/1.8 Lato, sans-serif; 
-      /*font-size: 16px;  */
-    color: #777;
-      /*position: relative;*/
-  } */
-    body {
-      font-size: 16px;
-    }
-    .small {
-      font-size: 12px; /* 75% of the baseline */
-    }
-    .large {
-      font-size: 20px; /* 125% of the baseline */
-    }
-    
-  h3, h4 {
-      margin: 10px 0 30px 0;
-      letter-spacing: 10px;
-      font-size: 20px;
-      color: #111;
-  }
-  .container {
-      padding: 10px 120px;
-  }
-  .person {
-      border: 10px solid transparent;
-      margin-bottom: 25px;
-      width: 80%;
-      height: 80%;
-      opacity: 0.7;
-  }
-  .person:hover {
-      border-color: #f1f1f1;
-  }
-  .carousel-inner img {
-      /*-webkit-filter: grayscale(90%);
-      filter: grayscale(90%); /* make all photos black and white */
-      width: 100%;  /*Set width to 100% */
-      margin: auto;
-      max-height: 500px !important;
-  }
-   
-  .carousel-caption h3 {
-      color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      width: 100%
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  .bg-1 {
-      background: #2d2d30;
-      color: #bdbdbd;
-  }
-  .bg-1 h3 {color: #fff;}
-  .bg-1 p {font-style: italic;}
-  .list-group-item:first-child {
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
-  }
-  .list-group-item:last-child {
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: 10px;
-      border-radius: 0;
-  }
-  .thumbnail p {
-      margin-top: 15px;
-      color: #555;
-  }f
-  .btn {
-      padding: 10px 20px;
-      background-color: #333;
-      color: #f1f1f1;
-      border-radius: 0;
-      transition: .2s;
-  }
-  .btn:hover, .btn:focus {
-      border: 1px solid #333;
-      background-color: #fff;
-      color: #000;
-  }
-  .modal-header, h4, .close {
-      background-color: #333;
-      color: #fff !important;
-      text-align: center;
-      font-size: 30px;
-  }
-  .modal-header, .modal-body {
-      padding: 40px 50px;
-  }
-  .nav-tabs li a {
-      color: #777;
-  }
-  #googleMap {
-      width: 100%;
-      height: 400px;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-  }
-  .navbar {
-      font-family: Montserrat, sans-serif;
-      margin-bottom: 0;
-      background-color: #2d2d30;
-      border: 0;
-      font-size: 15px !important;
-      letter-spacing: 3px;
-      opacity: 1;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-      color: #fff !important;
-  }
-  .navbar-nav li.active a {
-      color: #fff !important;
-      background-color: #29292c !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-  }
-  .open .dropdown-toggle {
-      color: #fff;
-      background-color: #555 !important;
-  }
-  .dropdown-menu li a {
-      color: #000 !important;
-  }
-  .dropdown-menu li a:hover {
-      background-color: red !important;
-  }
-  footer {
-      background-color: #2d2d30;
-      color: #f5f5f5;
-      padding: 32px;
-  }
-  footer a {
-      color: #f5f5f5;
-  }
-  footer a:hover {
-      color: #777;
-      text-decoration: none;
-  }
-  .form-control {
-      border-radius: 0;
-  }
-  textarea {
-      resize: none;
-  }
-  </style>
-</head>
+
+ <title>Kadumane Hills Estate</title>
+ </head>
   
 <body oncontextmenu="return false" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50"> 
-
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGJQGX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
@@ -367,9 +144,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
            Kukke Subramany Temple - 56km<br>
          </p>
       </div>
-
-    </div>
-   <p> <strong>For Enquiries call <a href="tel:+919731616130">+91 9731616130</a> or e-mail to <a href="mailto:info@kadumane.com?subject=Enquiry">info@kadumane.com</a></strong> </p>
+   </div>
+ </div>
+ 
+ <p> <strong>For Enquiries call <a href="tel:+919731616130">+91 9731616130</a> or e-mail to <a href="mailto:info@kadumane.com?subject=Enquiry">info@kadumane.com</a></strong> </p>
   <!-- <p> <strong>For enquiries please e-mail to <a href="mailto:info@kadumane.com">info@kadumane.com</a></strong> </p> -->
 
      <div id="campfire" class="container">
@@ -403,7 +181,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p><strong> Please note that the estate management cannot accept  responsibility for your possessions or any personal injuries sustained while camping or using fires.</strong></p>
     
    <p> <strong>For Enquiries call <a href="tel:+919731616130">+91 9731616130</a> or e-mail to <a href="mailto:info@kadumane.com?subject=Enquiry">info@kadumane.com</a></strong> </p>
- <!--  <p> <strong>For enquiries please e-mail to <a href="mailto:info@kadumane.com">info@kadumane.com</a></strong> </p> -->
+   <!--  <p> <strong>For enquiries please e-mail to <a href="mailto:info@kadumane.com">info@kadumane.com</a></strong> </p> -->
 
     </div>
 
@@ -453,11 +231,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div> 
       </div>  
     </div>
-
+  
     <!--<button class="btn" data-toggle="modal" data-target="#myModal"> For Enquiries please mail to info@kadumane.com </button> -->
     <p> <strong>For Enquiries call <a href="tel:+919731616130">+91 9731616130</a> or e-mail to <a href="mailto:info@kadumane.com?subject=Enquiry">info@kadumane.com</a></strong> </p> 
     <!--  <p> <strong>For enquiries please e-mail to <a href="mailto:info@kadumane.com">info@kadumane.com</a></strong> </p> -->
-    </div>
+ </div>
+ 
 
   <div id="terms" class="container text-left">
   <h3>Terms and Conditions</h3>
@@ -568,7 +347,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   end blog--> 
   </div>
 </div>
-
+ 
 <div id="map"></div>
 
 <!-- Add Google Maps -->
