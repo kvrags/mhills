@@ -33,21 +33,29 @@
       /*position: relative;*/
   } */
     body {
-      font-size: 20px;
+      font-size: 16px; /* baseline*/
+      line-height:1.2;
     }
     .small {
-      font-size: 15px; /* 75% of the baseline */
+      font-size: 75%; /* 75% of the baseline */
     }
     .large {
-      font-size: 25px; /* 125% of the baseline */
+      font-size: 125%; /* 125% of the baseline */
     }
     
-  h3, h4 {
+    h1{font-size:150%}
+    
+    h3, h4 {
       margin: 10px 0 30px 0;
       letter-spacing: 10px;
-      font-size: 20px;
+      font-size: 200%;
       color: #111;
   }
+    
+    @media(min-width:900px){
+      font-size:70%;
+    }
+    
   /*.container {
       padding: 10px 120px;
   }
